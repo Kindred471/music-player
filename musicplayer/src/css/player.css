@@ -1,0 +1,149 @@
+.player_body{
+    width: 1659px;
+    height: 54px;
+    display: flex;
+    position: relative;
+    background-color:#363636;
+    margin: 0px;
+    left:261px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.player_control{
+    position: relative;
+    width: 150px;
+    height: 54px;
+    left: 170px;
+    top: 3px;
+    color: white;
+    font-size: 35px;
+}
+.player_item{
+    font-size: 35px;
+    color: white;
+}
+.player_item_pause{
+    color: white;
+    font-size: 35px;
+}
+.music_info{
+    display: flex;
+    position: relative;
+    width: 680px;
+    left: 400px;
+    height: 54px;
+    background-color: #696969;
+}
+.music_imgs{
+
+    width: 60px;
+    height: 54px;
+    background-color: white;
+
+}
+.music_info_text{
+
+   width: 620px;
+    
+}
+.music_name{
+    position: relative;
+    top: 10px;
+    height: 16px;
+    font-size: 12px;
+    text-align: center;
+    width: 650px;
+    color: #bbbbbb;
+    color:#efefef;
+}
+.artist_name{
+    top: 10px;
+    position: relative;
+    width: 650px;
+    height: 14px;
+    font-size: 12px;
+    text-align: center;
+    color: #bbbbbb;
+}
+.time{
+    color: darkgray;
+    font-size:12px;
+    height:15px;
+    margin: 2px 0;
+}
+.current_time{
+    float: left;
+}
+.total_time{
+    float: right;
+}
+.bar{
+    cursor: pointer;
+    position: relative;
+    border: 1px;
+    background-color: #bbbbbb;
+    height: 5px;
+}
+.progress_bar{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background-color: #efefef;
+    transition: 0.2s ease width;
+}
+.player_item .bi{
+
+    font-size:35px;
+}
+#ins_time{
+    position: absolute;
+    top: -29px;
+    color: #fff;
+    font-size: 12px;
+    white-space: pre;
+    padding: 5px 6px;
+    border-radius: 4px;
+	display:none;
+}
+.volcontrol{
+    position: absolute;
+    margin: 15px 0;
+    left: 1350px;
+}
+.vol{
+
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.vol em{
+    display: inline-block;
+    background: 40px 40px;
+    width: 40px;
+    height: 35px;
+    font-size: 20px;
+    color: white;
+}
+.volBar {
+    display: block;
+    position: absolute;
+    left: 25px;
+    top:13px;
+    width: 100px;
+    height: 4px;
+    background-color: gray;
+    cursor: pointer;
+}
+.currvol{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+

@@ -1,0 +1,96 @@
+body {
+  margin: 0;      /* 移除 body 默认外边距 */
+  padding: 0;     /* 移除 body 默认内边距 */
+}
+
+
+.body-container
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1F1F1F;
+}
+.mainmenu{
+    width: 260px;
+    background-color: #252526;
+    height: 100%;
+    border-inline-end: 1px solid;
+    border-color:#1E1E1E;
+    position: relative;
+}
+.navigation{
+    height: 100%;
+    position: relative;
+}
+color-profile
+{
+    base #1F1F1F
+    manu #252526
+}
+.navigation_header{
+    height: 15%;
+
+}
+.navigation_contend{
+    height: auto;
+
+}
+.logo{
+
+}
+.navigation_contend_home{
+    height: 120px;
+
+}
+.navigation_contend_library{
+    height: 203px;
+
+}
+.navigation_contend_playlist{
+    height: 170px;
+
+}
+.navigation_item{
+    font-size: 17px;
+    font-family: "Microsoft YaHei UI Light";
+    font-weight: 500;
+    color: azure;
+    left: 35px;
+    position: relative;
+}
+.navigation_item_mini{
+    font-size: 13px;
+    font-family: "Microsoft YaHei UI Light";
+    font-weight: 700;
+    top:15px;
+    color: gray;
+    position: relative;
+}
+.search{
+
+}
+a {
+  text-decoration: none;
+}
+/* 或更彻底地覆盖所有伪类 */
+a, a:visited, a:hover, a:active {
+  text-decoration: none;
+    color: inherit;
+
+}
+ul {
+  list-style: none; /* 移除符号 */
+  padding-left: 0;  /* 清除左侧缩进 */
+  margin-left: 0;   /* 清除左侧边距 */
+}
+.navigation_item_logo{
+    font-size: 45px;
+    font-weight: 600;
+    color: azure;
+    left: 40px;
+    position: relative;
+
+}
