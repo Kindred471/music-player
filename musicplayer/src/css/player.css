@@ -2,13 +2,14 @@
     width: 1659px;
     height: 54px;
     display: flex;
-    position: relative;
+    position: fixed;
     background-color:#363636;
     margin: 0px;
     left:261px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    z-index: 1000;
 }
 .player_control{
     position: relative;
@@ -39,7 +40,7 @@
 
     width: 60px;
     height: 54px;
-    background-color: white;
+
 
 }
 .music_info_text{
