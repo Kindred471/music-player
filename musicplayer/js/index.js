@@ -3,7 +3,7 @@ $(function(){
     var musicName = $('.music_name');          // 歌曲名部分dom元素
     var artistName = $('.artist_name');        // 歌手名部分dom元素
 
-    var musicImgs = $('.music_imgs');          // 左侧封面图dom元素
+    var musicImgs = $('#music_img');          // 左侧封面图dom元素
 
     var playPauseBtn = $('#player_pause');       // 播放/暂停按钮 dom元素
     var playPrevBtn = $('#player_prev');              // 上一首按钮 dom元素
@@ -22,7 +22,7 @@ $(function(){
     var currvol = $('.currvol');
     // 一些计算所需的变量
     var seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0
-    var musicImgsData = ['img/bg.jpg','img/bg1.jpg','img/bg2.jpg']    // 图片地址数组
+    var musicImgsData = ['../img/bg.jpg','../img/bg1.jpg','../img/bg2.jpg']    // 图片地址数组
     var musicNameData = ['爱我还是他','10：30的飞机场','普通朋友'];                   // 歌曲名数组
     var artistNameData = ['陶喆','陶喆','陶喆']            // 创作歌手数组
     var musicUrls=['../mp3/music1.mp3','../mp3/music2.mp3','../mp3/music3.mp3'];// 歌曲mp3数组
@@ -38,16 +38,16 @@ $(function(){
     function playPause(){
         if(audio.paused){
             // playerContent1.addClass('active'); // 内容栏上移
-            musicImgs.addClass('active');      // 左侧图片开始动画效果
+            // musicImgs.addClass('active');      // 左侧图片开始动画效果
             playPauseBtn.attr('class','bi bi-pause-circle-fill') // 显示暂停图标
             checkBuffering(); // 检测是否需要缓冲
             audio.play();     // 播放
         }else{
             // playerContent1.removeClass('active'); // 内容栏下移
-            musicImgs.removeClass('active');      // 左侧图片停止旋转等动画效果
+            // musicImgs.removeClass('active');      // 左侧图片停止旋转等动画效果
             playPauseBtn.attr('class','bi bi-play-circle-fill'); // 显示播放按钮
             clearInterval(buffInterval);          // 清除检测是否需要缓冲的定时器
-            musicImgs.removeClass('buffering');    // 移除缓冲类名
+            // musicImgs.removeClass('buffering');    // 移除缓冲类名
             audio.pause(); // 暂停
         }
     }
@@ -153,7 +153,7 @@ $(function(){
             playPauseBtn.attr('class','bi bi-play-circle-fill'); // 显示播放按钮
 			seekBar.width(0);              // 播放进度条重置为0
             tProgress.text('00:00');       // 播放时间重置为 00:00
-            musicImgs.removeClass('buffering').removeClass('active');  // 移除相关类名
+            // musicImgs.removeClass('buffering').removeClass('active');  // 移除相关类名
             clearInterval(buffInterval);   // 清除定时器
 
             selectTrack(1);  // 添加这一句，可以实现自动播放
@@ -165,12 +165,12 @@ $(function(){
         clearInterval(buffInterval);
         buffInterval = setInterval(function()
         {
-            // 这里如果音频播放了，则nTime为当前时间毫秒数，如果没播放则为0；如果时间间隔过长，也将缓存
-            if( (nTime == 0) || (bTime - nTime) > 1000  ){
-                musicImgs.addClass('buffering');  // 添加缓存样式类
-            } else{
-                musicImgs.removeClass('buffering'); // 移除缓存样式类
-            }
+            // // 这里如果音频播放了，则nTime为当前时间毫秒数，如果没播放则为0；如果时间间隔过长，也将缓存
+            // if( (nTime == 0) || (bTime - nTime) > 1000  ){
+            //     musicImgs.addClass('buffering');  // 添加缓存样式类
+            // } else{
+            //     musicImgs.removeClass('buffering'); // 移除缓存样式类
+            // }
 
             bTime = new Date();
             bTime = bTime.getTime();
@@ -196,7 +196,7 @@ $(function(){
         if( flag == 0 ){
             playPauseBtn.attr('class','bi bi-play-circle-fill'); // 显示播放图标
         }else{
-            musicImgs.removeClass('buffering');
+            // musicImgs.removeClass('buffering');
             playPauseBtn.attr('class','bi bi-pause-circle-fill') // 显示暂停图标
         }
 
@@ -219,7 +219,7 @@ $(function(){
         if(flag != 0){
             audio.play();
             // playerContent1.addClass('active');
-            musicImgs.addClass('active');
+            // musicImgs.addClass('active');
 
             clearInterval(buffInterval);
             checkBuffering();
@@ -228,7 +228,9 @@ $(function(){
         // 将歌手名，歌曲名，图片链接，设置到元素上
         artistName.text(currArtist);
         musicName.text(currMusic);
-        musicImgs.find('.img').css({'background':'url('+currImg+')'})
+        musicImgs.css({'background':'url('+currImg+')'})
+        // musicImgs.style.background = "url("+currImg+")";
+
 
      }
      function volmute(){
@@ -273,9 +275,6 @@ $(function(){
            console.log(audio.volume* 100 +'%')
            document.getElementById("currvol").style.width=audio.volume * 100 +'%'
        });
-       // currvol.width=audio.volume * 100 +'%';
-       // console.log(audio.volume)
-        //
     }
 
 

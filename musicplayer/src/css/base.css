@@ -25,11 +25,7 @@ body {
     height: 100%;
     position: relative;
 }
-color-profile
-{
-    base #1F1F1F
-    manu #252526
-}
+
 .navigation_header{
     height: 15%;
 
@@ -94,3 +90,84 @@ ul {
     position: relative;
 
 }
+.content_body{
+    width: 1480px;
+    height: 2000px;
+    left: 350px;
+    top:80px;
+    position: absolute;
+}
+.content_main_title{
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid dimgrey;
+}
+.content_title{
+    color: azure;
+    margin: 0px;
+}
+.recommend_content{
+    
+
+}
+.recommend_content_body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.recommend_content_body>div{
+    width: 300px;
+    height: 350px;
+    margin-right:10px;
+
+}
+.content_title2{
+    color: azure;
+    font-size: 15px;
+    margin: 0px;
+}
+.content_title3{
+    color: darkgray;
+    margin: 0px;
+    font-size: 13px;
+}
+.recommend_content_title2{
+    margin-top: 10px;
+}
+.recommend_content_pic1{
+    height: 320px;
+    margin-top: 10px;
+    background-image: url("../../img/00s.png");
+    background-size:cover;
+    background-position: center;
+}
+.recommend_content_pic2{
+    height: 320px;
+    margin-top: 10px;
+    background-image: url("../../img/soulpower.png");
+    background-size:cover;
+    background-position: center;
+}
+.recommend_content_pic3{
+    height: 320px;
+    margin-top: 10px;
+    background-image: url("../../img/deca joins.png");
+    background-size:cover;
+    background-position: center;
+}
+.recommend_content_pic4{
+    height: 320px;
+    margin-top: 10px;
+    background-image: url("../../img/taozhe.png");
+    background-size:cover;
+    background-position: center;
+}
+.recommend_content_pic5{
+    height: 320px;
+    margin-top: 10px;
+    background-image: url("../../img/fdt.png");
+    background-size:cover;
+    background-position: center;
+}
+
